@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:DataBinding"
+             x:Class="DataBinding.BindingList"
+             Title="Binding Lists View"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:Datos x:Key="datosUno"/>
+            <local:Comverters x:Key="saldoConverter"/>
+
+            <DataTemplate x:Key="listTemplate">
+                <ViewCell >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout>
+                            <Label  Text="{Binding Nombre}"
+                                    FontSize="20"
+                            />
+                            <Label Text="{Binding Pais}"
+                             FontSize="10"
+                            />
+                            <Label Text="{Binding FechaDeNacimiento, StringFormat='{}{0:dd/MM/yyyy}'}"
+                                   FontSize="8"
+                             />
+                        </StackLayout>
+                        <Label Text="{Binding Saldo, StringFormat='{}{0:C}'}"
+                               Grid.Column="1"
+                               VerticalTextAlignment="Center"
+                               TextColor="{Binding Saldo, Converter = {StaticResource saldoConverter} }"
+                       ></Label>
+                    </Grid>
+                </ViewCell>
+                
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+
+
+        <Grid BindingContext="{Binding  Source= {StaticResource datosUno}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                
+            </Grid.RowDefinitions>
+            
+            <ListView x:Name="lstPersonas"
+                      ItemsSource="{Binding Personas }"
+                      SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
+                      HasUnevenRows="True"
+                      ItemTemplate="{StaticResource listTemplate}"
+                      >
+            </ListView >
+            <StackLayout Grid.Row="1"
+                         HorizontalOptions="Center"
+                         BindingContext="{Binding PersonaSeleccionada}">
+                <Label  Text="{Binding Nombre,Mode=TwoWay}"
+                        TextColor="Blue"
+                        ></Label>
+                <Label Text="{Binding Pais,Mode=TwoWay}"
+                       TextColor="Blue"
+                       FontSize="Large"
+                       >
+                </Label>
+                <Label Text="{Binding FechaDeNacimiento, StringFormat='{}{0:dd/MM/yyyy}'}"
+                       TextColor="Blue"
+                       ></Label>
+                <Label Text="{Binding Saldo, StringFormat='{}{0:C}'}"
+                       TextColor="Blue"
+                       ></Label>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+    
+    
+    <!-- binding  Manera Uno 
+    //
+    
+      BindingContext="{Binding PersonaSeleccionada}">
+    
+    // binding manera dos
+    
+    <ListView 
+                        x:Name="lstPersonas"
+                        ItemsSource="{Binding Personas }"
+                      SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
+                      >
+            </ListView>
+            <StackLayout Grid.Row="1"
+                         HorizontalOptions="Center"
+                         BindingContext="{Binding SelectedItem, Source={x:Reference lstPersonas }}">
+                <Label  Text="{Binding Nombre,Mode=TwoWay}"
+                        TextColor="Blue"
+                        ></Label>
+                <Label Text="{Binding Pais,Mode=TwoWay}"
+                       TextColor="Blue"
+                       FontSize="Large"
+                       
+                       ></Label>
+            </StackLayout>
+    
+    -->
