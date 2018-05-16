@@ -8,7 +8,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:Persona x:Key="personaUno" 
-                           Nombre="Nilson"
+                           Nombre="Manuel"
                            Pais="Colombia"
                            >
             </local:Persona>

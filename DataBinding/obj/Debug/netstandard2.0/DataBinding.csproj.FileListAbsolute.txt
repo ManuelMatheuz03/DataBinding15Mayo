@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\bin\Debug\netstandard2.0\DataBinding.deps.json
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\bin\Debug\netstandard2.0\DataBinding.dll
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\bin\Debug\netstandard2.0\DataBinding.pdb
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.csprojAssemblyReference.cache
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.App.xaml.g.cs
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.BindingList.xaml.g.cs
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.ListsPage.xaml.g.cs
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.MainPage.xaml.g.cs
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.AssemblyInfo.cs
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.dll
+C:\Users\user\source\repos\DataBinding\DataBinding\DataBinding\obj\Debug\netstandard2.0\DataBinding.pdb
